@@ -25,3 +25,6 @@
 [submodule "opensbi"]
 	path = opensbi
 	url = https://github.com/riscv/opensbi.git
+[submodule "generators/rocket-chip-blocks"]
+	path = generators/rocket-chip-blocks
+	url = https://github.com/chipsalliance/rocket-chip-blocks
