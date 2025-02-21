@@ -632,6 +632,18 @@ public class Main {
             String dst = null;
             BusSignal sig = sig_map.get(nm);
             if (sig != null) dst = sig.addr_offs_name != null ? sig.addr_offs_name : sig.signal_name;
+            else if (nm.equals("io_aggregator_5_clock")) dst = "clock";
+            else if (nm.equals("io_aggregator_4_clock")) dst = "clock";
+            else if (nm.equals("io_aggregator_3_clock")) dst = "clock";
+            else if (nm.equals("io_aggregator_2_clock")) dst = "clock";
+            else if (nm.equals("io_aggregator_1_clock")) dst = "clock";
+            else if (nm.equals("io_aggregator_0_clock")) dst = "clock";
+            else if (nm.equals("io_aggregator_5_reset")) dst = "riscv_reset";
+            else if (nm.equals("io_aggregator_4_reset")) dst = "riscv_reset";
+            else if (nm.equals("io_aggregator_3_reset")) dst = "riscv_reset";
+            else if (nm.equals("io_aggregator_2_reset")) dst = "riscv_reset";
+            else if (nm.equals("io_aggregator_1_reset")) dst = "riscv_reset";
+            else if (nm.equals("io_aggregator_0_reset")) dst = "riscv_reset";
             else if (nm.equals("reset")) dst = "riscv_reset";
             else if (nm.equals("debug_clock")) dst = "clock";
             else if (nm.equals("debug_clockeddmi_dmiClock")) dst = "clock";
@@ -915,7 +927,11 @@ public class Main {
                     if (skip) return;
                     String s = getArgs();
                     int i = s.indexOf(' ');
-                    macros.put(s.substring(0, i), s.substring(i + 1));
+                    if (i == -1) {
+                        macros.put(s, " ");
+                    } else {
+                        macros.put(s.substring(0, i), s.substring(i + 1));
+                    }
                 }
                 void onUnDef() {
                     setType(SKIP);
