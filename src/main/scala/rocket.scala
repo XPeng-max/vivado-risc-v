@@ -25,17 +25,17 @@ class RocketSystemModuleImp[+L <: RocketSystem](_outer: L) extends RocketSubsyst
     with HasExtInterruptsModuleImp
     with DontTouch
 
-class WithGemmini(mesh_size: Int, bus_bits: Int) extends Config((site, here, up) => {
-  case BuildRoCC => up(BuildRoCC) ++ Seq(
-    (p: Parameters) => {
-      implicit val q = p
-      implicit val v = implicitly[ValName]
-      LazyModule(new gemmini.Gemmini(gemmini.GemminiConfigs.defaultConfig.copy(
-        meshRows = mesh_size, meshColumns = mesh_size, dma_buswidth = bus_bits)))
-    }
-  )
-  case SystemBusKey => up(SystemBusKey).copy(beatBytes = bus_bits/8)
-})
+// class WithGemmini(mesh_size: Int, bus_bits: Int) extends Config((site, here, up) => {
+//   case BuildRoCC => up(BuildRoCC) ++ Seq(
+//     (p: Parameters) => {
+//       implicit val q = p
+//       implicit val v = implicitly[ValName]
+//       LazyModule(new gemmini.Gemmini(gemmini.GemminiConfigs.defaultConfig.copy(
+//         meshRows = mesh_size, meshColumns = mesh_size, dma_buswidth = bus_bits)))
+//     }
+//   )
+//   case SystemBusKey => up(SystemBusKey).copy(beatBytes = bus_bits/8)
+// })
 
 class WithDebugProgBuf(prog_buf_words: Int, imp_break: Boolean) extends Config((site, here, up) => {
   case DebugModuleKey => up(DebugModuleKey, site).map(_.copy(nProgramBufferWords = prog_buf_words, hasImplicitEbreak = imp_break))
@@ -209,69 +209,69 @@ class Rocket64b2l2 extends Config(
 
 /* With Gemmini 4x4 and 2 small cores */
 /* Note: small core has no MMU and cannot boot mainstream Linux */
-class Rocket64s2gem4 extends Config(
-  new WithGemmini(4, 64)  ++
-  new WithInclusiveCache  ++
-  new WithNBreakpoints(8) ++
-  new WithNSmallCores(2)  ++
-  new RocketBaseConfig)
+// class Rocket64s2gem4 extends Config(
+//   new WithGemmini(4, 64)  ++
+//   new WithInclusiveCache  ++
+//   new WithNBreakpoints(8) ++
+//   new WithNSmallCores(2)  ++
+//   new RocketBaseConfig)
 
 /* With Gemmini 4x4 and 2 medium cores */
 /* Note: cannot get medium core to boot Linux: Oops - illegal instruction */
-class Rocket64m2gem4 extends Config(
-  new WithGemmini(4, 64)  ++
-  new WithInclusiveCache  ++
-  new WithNBreakpoints(8) ++
-  new WithNMedCores(2)    ++
-  new RocketBaseConfig)
+// class Rocket64m2gem4 extends Config(
+//   new WithGemmini(4, 64)  ++
+//   new WithInclusiveCache  ++
+//   new WithNBreakpoints(8) ++
+//   new WithNMedCores(2)    ++
+//   new RocketBaseConfig)
 
 /* With Gemmini 4x4 */
-class Rocket64b1gem4 extends Config(
-  new WithGemmini(4, 64)  ++
-  new WithInclusiveCache  ++
-  new WithNBreakpoints(8) ++
-  new WithNBigCores(1)    ++
-  new RocketBaseConfig)
+// class Rocket64b1gem4 extends Config(
+//   new WithGemmini(4, 64)  ++
+//   new WithInclusiveCache  ++
+//   new WithNBreakpoints(8) ++
+//   new WithNBigCores(1)    ++
+//   new RocketBaseConfig)
 
 /* With Gemmini 8x8 */
-class Rocket64b1gem8 extends Config(
-  new WithGemmini(8, 64)  ++
-  new WithInclusiveCache  ++
-  new WithNBreakpoints(8) ++
-  new WithNBigCores(1)    ++
-  new RocketBaseConfig)
+// class Rocket64b1gem8 extends Config(
+//   new WithGemmini(8, 64)  ++
+//   new WithInclusiveCache  ++
+//   new WithNBreakpoints(8) ++
+//   new WithNBigCores(1)    ++
+//   new RocketBaseConfig)
 
 /* With Gemmini 16x16 */
-class Rocket64b1gem16 extends Config(
-  new WithGemmini(16, 64) ++
-  new WithInclusiveCache  ++
-  new WithNBreakpoints(8) ++
-  new WithNBigCores(1)    ++
-  new RocketBaseConfig)
+// class Rocket64b1gem16 extends Config(
+//   new WithGemmini(16, 64) ++
+//   new WithInclusiveCache  ++
+//   new WithNBreakpoints(8) ++
+//   new WithNBigCores(1)    ++
+//   new RocketBaseConfig)
 
 /* With Gemmini 4x4, 2 big cores */
-class Rocket64b2gem4 extends Config(
-  new WithGemmini(4, 64)  ++
-  new WithInclusiveCache  ++
-  new WithNBreakpoints(8) ++
-  new WithNBigCores(2)    ++
-  new RocketBaseConfig)
+// class Rocket64b2gem4 extends Config(
+//   new WithGemmini(4, 64)  ++
+//   new WithInclusiveCache  ++
+//   new WithNBreakpoints(8) ++
+//   new WithNBigCores(2)    ++
+//   new RocketBaseConfig)
 
 /* With Gemmini 8x8, 2 big cores */
-class Rocket64b2gem8 extends Config(
-  new WithGemmini(8, 64)  ++
-  new WithInclusiveCache  ++
-  new WithNBreakpoints(8) ++
-  new WithNBigCores(2)    ++
-  new RocketBaseConfig)
+// class Rocket64b2gem8 extends Config(
+//   new WithGemmini(8, 64)  ++
+//   new WithInclusiveCache  ++
+//   new WithNBreakpoints(8) ++
+//   new WithNBigCores(2)    ++
+//   new RocketBaseConfig)
 
 /* With Gemmini 16x16, 2 big cores */
-class Rocket64b2gem16 extends Config(
-  new WithGemmini(16, 64) ++
-  new WithInclusiveCache  ++
-  new WithNBreakpoints(8) ++
-  new WithNBigCores(2)    ++
-  new RocketBaseConfig)
+// class Rocket64b2gem16 extends Config(
+//   new WithGemmini(16, 64) ++
+//   new WithInclusiveCache  ++
+//   new WithNBreakpoints(8) ++
+//   new WithNBigCores(2)    ++
+//   new RocketBaseConfig)
 
 class Rocket64b4 extends Config(
   new WithNBreakpoints(8) ++
