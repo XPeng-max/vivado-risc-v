@@ -65,7 +65,7 @@ clean-sbt:
 clean:
 	rm -rf workspace/patch-*-done
 	git submodule foreach --recursive git clean -xfdq
-	sudo rm -rf debian-riscv64 target project/target project/project/target generators/targetutils/target vhdl-wrapper/bin
+	rm -rf debian-riscv64 target project/target project/project/target generators/targetutils/target vhdl-wrapper/bin
 
 # --- download gcc, initrd and rootfs from github.com ---
 
@@ -99,7 +99,7 @@ debian-riscv64/rootfs.tar.gz:
 .PHONY: linux
 linux: linux-stable/arch/riscv/boot/Image
 
-CROSS_COMPILE_LINUX = /usr/bin/riscv64-linux-gnu-
+CROSS_COMPILE_LINUX = /opt/riscv-toolchain/bin/riscv64-unknown-linux-gnu-
 
 workspace/patch-linux-done: patches/linux.patch patches/fpga-axi-sdc.c patches/fpga-axi-eth.c patches/linux.config
 	if [ -s patches/linux.patch ] ; then cd linux-stable && ( git apply -R --check ../patches/linux.patch 2>/dev/null || git apply ../patches/linux.patch ) ; fi
@@ -223,7 +223,8 @@ CHISEL_SRC_DIRS = \
   generators/testchipip/src/main
 
 CHISEL_SRC := $(foreach path, $(CHISEL_SRC_DIRS), $(shell test -d $(path) && find $(path) -iname "*.scala" -not -name ".*"))
-FIRRTL = java -Xmx12G -Xss8M $(JAVA_OPTIONS) -cp `realpath target/scala-*/system.jar` firrtl.stage.FirrtlMain
+# FIRRTL = java -Xmx12G -Xss8M $(JAVA_OPTIONS) -cp `realpath target/scala-*/system.jar` circt.stage.ChiselMain
+FIRRTL = /home/chenkefa/disk/firtool-1.62.0/bin/firtool
 
 workspace/patch-hdl-done:
 	if [ -s patches/ethernet.patch ] ; then cd ethernet/verilog-ethernet && ( git apply -R --check ../../patches/ethernet.patch 2>/dev/null || git apply ../../patches/ethernet.patch ) ; fi
@@ -261,10 +262,10 @@ workspace/$(CONFIG)/system-$(BOARD)/RocketSystem.fir: workspace/$(CONFIG)/system
 
 # Generate Rocket SoC HDL
 workspace/$(CONFIG)/system-$(BOARD).v: workspace/$(CONFIG)/system-$(BOARD)/RocketSystem.fir
-	$(FIRRTL) -i $< -o RocketSystem.v --compiler verilog \
-	  --annotation-file workspace/$(CONFIG)/system-$(BOARD)/RocketSystem.anno.json \
-	  --custom-transforms firrtl.passes.InlineInstances \
-	  --target:fpga
+	$(FIRRTL) -o workspace/$(CONFIG)/system-$(BOARD)/RocketSystem.v \
+	  --annotation-file=workspace/$(CONFIG)/system-$(BOARD)/RocketSystem.anno.json \
+		--verilog --lowering-options=verifLabels,disallowLocalVariables,disallowPackedArrays,noAlwaysComb \
+		--disable-annotation-unknown $<
 	cp workspace/$(CONFIG)/system-$(BOARD)/RocketSystem.v workspace/$(CONFIG)/system-$(BOARD).v
 
 # Generate Rocket SoC wrapper for Vivado
