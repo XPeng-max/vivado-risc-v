@@ -17,3 +17,7 @@
 /.ivy2/
 /.sbt/
 /.Xilinx/
+/.bloop/
+/.metals/
+/.vscode/
+/project/
