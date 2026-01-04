@@ -42,18 +42,20 @@ apt-install-qemi:
 	sudo apt install qemu-system-misc opensbi u-boot-qemu qemu-utils
 
 # skip submodules which are not needed and take long time to update
-SKIP_SUBMODULES = torture software/gemmini-rocc-tests software/onnxruntime-riscv
+SKIP_SOFT_SUBMODULES = u-boot linux-stable opensbi
+SKIP_SOFT ?= 0
+GIT_SKIP_FLAGS := $(if $(filter 1 yes true,$(SKIP_SOFT)),$(foreach m,$(SKIP_SOFT_SUBMODULES),-c submodule.$(m).update=none))
 
 update:
 	git pull --no-recurse-submodules
 	rm -rf workspace/patch-*-done
 	git submodule sync --recursive
-	git $(foreach m,$(SKIP_SUBMODULES),-c submodule.$(m).update=none) submodule update --init --force --recursive
+	git $(GIT_SKIP_FLAGS) submodule update --init --force --recursive
 
 update-submodules:
 	rm -rf workspace/patch-*-done
 	git submodule sync --recursive
-	git $(foreach m,$(SKIP_SUBMODULES),-c submodule.$(m).update=none) submodule update --init --force --recursive
+	git $(GIT_SKIP_FLAGS) submodule update --init --force --recursive
 
 clean-submodules:
 	git submodule foreach --recursive git clean -xfdq

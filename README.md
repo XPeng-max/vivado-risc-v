@@ -58,6 +58,9 @@ git clone https://github.com/eugene-tarassov/vivado-risc-v.git
 cd vivado-risc-v
 make apt-install
 make update-submodules
+# If you only want to build FPGA bitream, using
+# make update-submodules SKIP_SOFT=1
+# can skip u-boot, linux, and opensbi submodule
 ```
 
 ## Build FPGA bitstream
