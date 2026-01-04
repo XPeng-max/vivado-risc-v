@@ -233,7 +233,6 @@ workspace/patch-hdl-done:
 	if [ -s patches/rocket-chip.patch ] ; then cd rocket-chip && ( git apply -R --check ../patches/rocket-chip.patch 2>/dev/null || git apply ../patches/rocket-chip.patch ) ; fi
 	if [ -s patches/riscv-boom.patch ] ; then cd generators/riscv-boom && ( git apply -R --check ../../patches/riscv-boom.patch 2>/dev/null || git apply ../../patches/riscv-boom.patch ) ; fi
 	if [ -s patches/sifive-cache.patch ] ; then cd generators/sifive-cache && ( git apply -R --check ../../patches/sifive-cache.patch 2>/dev/null || git apply ../../patches/sifive-cache.patch ) ; fi
-	if [ -s patches/gemmini.patch ] ; then cd generators/gemmini && ( git apply -R --check ../../patches/gemmini.patch 2>/dev/null || git apply ../../patches/gemmini.patch ) ; fi
 	mkdir -p workspace && touch workspace/patch-hdl-done
 
 # Generate default device tree - not including peripheral devices or board specific data
