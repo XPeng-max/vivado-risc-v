@@ -334,6 +334,495 @@ class Rocket64x1 extends Config(
   new boom.v3.common.WithNMediumBooms(1) ++
   new RocketWideBusConfig)
 
+class Rocket64x1w2m2 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(2, 2) ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class Rocket64x1w2m4 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(2, 4) ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class Rocket64x1w2m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(2, 8) ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class Rocket64x1w4m2 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 2) ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class Rocket64x1w4m4 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 4) ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class Rocket64x1w4m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 8) ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class Rocket64x1w8m2 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(8, 2) ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class Rocket64x1w8m4 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(8, 4) ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class Rocket64x1w8m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(8, 8) ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class PrefetchRocket64x1 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class StridePrefetchRocket64x1 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithStridePrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class StridePrefetchRocket64x1w2m2 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(2, 2) ++
+  new boom.v3.common.WithStridePrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class StridePrefetchRocket64x1w2m4 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(2, 4) ++
+  new boom.v3.common.WithStridePrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class StridePrefetchRocket64x1w2m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(2, 8) ++
+  new boom.v3.common.WithStridePrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class StridePrefetchRocket64x1w4m2 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 2) ++
+  new boom.v3.common.WithStridePrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class StridePrefetchRocket64x1w4m4 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 4) ++
+  new boom.v3.common.WithStridePrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class StridePrefetchRocket64x1w4m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 8) ++
+  new boom.v3.common.WithStridePrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class StridePrefetchRocket64x1w8m2 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(8, 2) ++
+  new boom.v3.common.WithStridePrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class StridePrefetchRocket64x1w8m4 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(8, 4) ++
+  new boom.v3.common.WithStridePrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class StridePrefetchRocket64x1w8m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(8, 8) ++
+  new boom.v3.common.WithStridePrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class StreamPrefetchRocket64x1 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithStreamPrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class StreamPrefetchRocket64x1w2m2 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(2, 2) ++
+  new boom.v3.common.WithStreamPrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class StreamPrefetchRocket64x1w2m4 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(2, 4) ++
+  new boom.v3.common.WithStreamPrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class StreamPrefetchRocket64x1w2m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(2, 8) ++
+  new boom.v3.common.WithStreamPrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class StreamPrefetchRocket64x1w4m2 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 2) ++
+  new boom.v3.common.WithStreamPrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class StreamPrefetchRocket64x1w4m4 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 4) ++
+  new boom.v3.common.WithStreamPrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class StreamPrefetchRocket64x1w4m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 8) ++
+  new boom.v3.common.WithStreamPrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class StreamPrefetchRocket64x1w8m2 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(8, 2) ++
+  new boom.v3.common.WithStreamPrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class StreamPrefetchRocket64x1w8m4 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(8, 4) ++
+  new boom.v3.common.WithStreamPrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class StreamPrefetchRocket64x1w8m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(8, 8) ++
+  new boom.v3.common.WithStreamPrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class NextLinePrefetchRocket64x1 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithNextLinePrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class NextLinePrefetchRocket64x1w2m2 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(2, 2) ++
+  new boom.v3.common.WithNextLinePrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class NextLinePrefetchRocket64x1w2m4 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(2, 4) ++
+  new boom.v3.common.WithNextLinePrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class NextLinePrefetchRocket64x1w2m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(2, 8) ++
+  new boom.v3.common.WithNextLinePrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class NextLinePrefetchRocket64x1w4m2 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 2) ++
+  new boom.v3.common.WithNextLinePrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class NextLinePrefetchRocket64x1w4m4 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 4) ++
+  new boom.v3.common.WithNextLinePrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class NextLinePrefetchRocket64x1w4m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 8) ++
+  new boom.v3.common.WithNextLinePrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class NextLinePrefetchRocket64x1w8m2 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(8, 2) ++
+  new boom.v3.common.WithNextLinePrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class NextLinePrefetchRocket64x1w8m4 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(8, 4) ++
+  new boom.v3.common.WithNextLinePrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class NextLinePrefetchRocket64x1w8m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(8, 8) ++
+  new boom.v3.common.WithNextLinePrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
+class CPLXPrefetchRocket64x1w4m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 8) ++
+  new boom.v3.common.WithCPLXPrefetch ++
+  new boom.v3.common.WithPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig
+)
+
+
+class StrideCPLXIntegratedPrefetchRocket64x1w4m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 8) ++
+  new boom.v3.common.WithStridePrefetch ++
+  new boom.v3.common.WithCPLXPrefetch ++
+  new boom.v3.common.WithIntegratedPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig
+)
+
+class StrideCPLXAlectoIntegratedPrefetchRocket64x1w4m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 8) ++
+  new boom.v3.common.WithAlecto ++
+  new boom.v3.common.WithStridePrefetch ++
+  new boom.v3.common.WithCPLXPrefetch ++
+  new boom.v3.common.WithIntegratedPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig
+)
+
+class CPLXNextLineIntegratedPrefetchRocket64x1w4m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 8) ++
+  new boom.v3.common.WithNextLinePrefetch ++
+  new boom.v3.common.WithCPLXPrefetch ++
+  new boom.v3.common.WithIntegratedPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig
+)
+
+class CPLXStreamIntegratedPrefetchRocket64x1w4m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 8) ++
+  new boom.v3.common.WithCPLXPrefetch ++
+  new boom.v3.common.WithStreamPrefetch ++
+  new boom.v3.common.WithIntegratedPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig
+)
+
+class NextLineStrideIntegratedPrefetchRocket64x1w4m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 8) ++
+  new boom.v3.common.WithNextLinePrefetch ++
+  new boom.v3.common.WithStridePrefetch ++
+  new boom.v3.common.WithIntegratedPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig
+)
+
+class NextLineStreamIntegratedPrefetchRocket64x1w4m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 8) ++
+  new boom.v3.common.WithNextLinePrefetch ++
+  new boom.v3.common.WithStreamPrefetch ++
+  new boom.v3.common.WithIntegratedPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig
+)
+
+class CPLXNextLineAlectoIntegratedPrefetchRocket64x1w4m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 8) ++
+  new boom.v3.common.WithAlecto ++
+  new boom.v3.common.WithNextLinePrefetch ++
+  new boom.v3.common.WithCPLXPrefetch ++
+  new boom.v3.common.WithIntegratedPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig
+)
+
+class CPLXStreamAlectoIntegratedPrefetchRocket64x1w4m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 8) ++
+  new boom.v3.common.WithAlecto ++
+  new boom.v3.common.WithCPLXPrefetch ++
+  new boom.v3.common.WithStreamPrefetch ++
+  new boom.v3.common.WithIntegratedPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig
+)
+
+class NextLineStrideAlectoIntegratedPrefetchRocket64x1w4m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 8) ++
+  new boom.v3.common.WithAlecto ++
+  new boom.v3.common.WithNextLinePrefetch ++
+  new boom.v3.common.WithStridePrefetch ++
+  new boom.v3.common.WithIntegratedPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig
+)
+
+class NextLineStreamAlectoIntegratedPrefetchRocket64x1w4m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 8) ++
+  new boom.v3.common.WithAlecto ++
+  new boom.v3.common.WithNextLinePrefetch ++
+  new boom.v3.common.WithStreamPrefetch ++
+  new boom.v3.common.WithIntegratedPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig
+)
+
+class AlectoIntegratedPrefetchRocket64x1w4m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 8) ++
+  new boom.v3.common.WithAlecto ++
+  new boom.v3.common.WithNextLinePrefetch ++
+  new boom.v3.common.WithStridePrefetch ++
+  new boom.v3.common.WithStreamPrefetch ++
+  new boom.v3.common.WithCPLXPrefetch ++
+  new boom.v3.common.WithIntegratedPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig
+)
+
+class IntegratedPrefetchRocket64x1w4m8 extends Config(
+  new WithInclusiveCache  ++
+  new WithNBreakpoints(8) ++
+  new boom.v3.common.WithWmMn(4, 8) ++
+  new boom.v3.common.WithNextLinePrefetch ++
+  new boom.v3.common.WithStridePrefetch ++
+  new boom.v3.common.WithStreamPrefetch ++
+  new boom.v3.common.WithCPLXPrefetch ++
+  new boom.v3.common.WithIntegratedPrefetch ++
+  new boom.v3.common.WithNMediumBooms(1) ++
+  new RocketWideBusConfig)
+
 /* Note: multi-core BOOM appears unstable */
 class Rocket64x2 extends Config(
   new WithInclusiveCache  ++
